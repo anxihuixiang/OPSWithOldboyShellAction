@@ -9,3 +9,11 @@ tail -l /etc/profile;
 #使最新的配置生效
 source /etc/profile
 
+####
+# 查看sh版本 
+####
+#查看sh版本
+ll /bin/sh
+
+#查看bash版本
+ll /bin/bash
