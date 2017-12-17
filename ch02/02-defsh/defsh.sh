@@ -2,4 +2,4 @@
 echo $SHELL 
 
 #查看方式2
-grep /etc/passwd
+grep root /etc/passwd
