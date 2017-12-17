@@ -7,4 +7,4 @@
 oldboy="I am oldboy"
 
 #打印变量
-echo oldboy
+echo $oldboy
