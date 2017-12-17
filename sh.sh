@@ -10,7 +10,7 @@ tail -l /etc/profile;
 source /etc/profile
 
 ####
-# 查看sh版本 
+# 查看sh版本
 ####
 #查看sh版本
 ll /bin/sh
@@ -20,7 +20,7 @@ ll /bin/bash
 
 
 ####
-# 查看系统shell软件的开头 
+# 查看系统shell软件的开头
 ####
 #查看 sshd ，脚本开头
 head -1 /etc/init.d/sshd
@@ -32,7 +32,7 @@ head -1 /etc/init.d/ntpd
 head -1 /etc/init.d/crond
 
 ####
-# 执行脚本的各种方法 
+# 执行脚本的各种方法
 ####
 #使用 sh 执行脚本，开启新进程
 sh test.sh
@@ -56,3 +56,12 @@ source test.sh
 # 使用 . 载入当前进程执行
 . test.sh
 
+
+####
+# 定义和打印变量
+####
+#定义变量并赋值
+oldboy="I am oldboy"
+
+#打印变量
+echo oldboy
