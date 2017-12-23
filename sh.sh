@@ -357,3 +357,17 @@ sh p1.sh oldboy oldgirl;
 
 #传递带空格的字符串参数
 sh p1.sh "oldboy oldgirl";
+
+####
+# 打印2个位置变了 
+####
+echo $1 $2;
+
+####
+# 打印位置参数 $1 和 $2
+####
+# 传递2个参数
+sh p1.sh longge bingbing;
+
+#传递带空格的字符串参数
+sh p1.sh "longge bingbing" oldgirl;
