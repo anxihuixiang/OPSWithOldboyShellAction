@@ -382,7 +382,7 @@ echo \${1..15};
 echo \${1..15} > n.sh
 
 #打印连续字符
-echo \{a..z};
+echo {a..z};
 
 #打钱前n个位置的字母
-sh n.sh;
+sh n.sh {a..z};
