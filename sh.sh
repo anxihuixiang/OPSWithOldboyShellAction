@@ -371,3 +371,18 @@ sh p2.sh longge bingbing;
 
 #传递带空格的字符串参数
 sh p2.sh "longge bingbing" oldgirl;
+
+####
+#  打印到第n个位置的所有参数$n 
+####
+#打印15前15个变量
+echo \${1..15};
+
+#重定向打印前15个到指定的文件
+echo \${1..15} > n.sh
+
+#打印连续字符
+echo \{a..z};
+
+#打钱前n个位置的字母
+sh n.sh;
