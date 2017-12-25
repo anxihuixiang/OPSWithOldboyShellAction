@@ -536,3 +536,27 @@ echo $?;
 
 sh test4.sh a1 a2;
 echo $?;
+
+####
+# $$ 当前脚本的pid 
+####
+# 将当前脚本的pid输出到文件中
+echo $$ > /tmp/a.pid;
+
+#睡300s模拟守护
+sleep 300;
+
+####
+# 测试 test_pid.sh
+####
+# 查看 test_pid.sh 的 pid
+ps -ef | grep test_pid | grep -v grep;
+
+# 守护运行 test_pid.sh
+sh test_pid.sh &
+
+# 查看 test_pid.sh 的 pid
+ps -ef | grep test_pid | grep -v grep;
+
+#查看进程文件 
+cat /tmp/a.pid;
