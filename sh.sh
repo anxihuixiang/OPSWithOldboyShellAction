@@ -404,3 +404,40 @@ basename ~/vspros/OPSWithOldboyShellAction/ch04/01-${n}/echo-0.sh
 
 # 打印路径信息
 sh 05-echo-path.sh ~/vspros/OPSWithOldboyShellAction/ch04/01-${n}/echo-0.sh
+
+####
+# $# 传参个数 
+####
+#传递26个参数，但只打印9个
+sh q.sh {a..z}
+
+####
+# $# 判断命令行参数个数 
+####
+#判断参数个数是否为不等于2
+[$# -ne 2] && { #如果参数个数不等于2，给出提示并退出
+    echo "must two args";
+    exit 1;#退出
+}
+
+#满足参数个数为2的条件
+echo oldgirl;
+
+####
+# $# 与 if 验证参数个数 
+####
+if [$# -ne 2] #参数个数!=2 
+then
+    echo "USAGE:/bin/sh $0 arg1 arg2";# $0 表示脚本全路径名
+    exit 1;
+fi
+
+#参数个数=2的时候，打印这2个参数
+echo $1 $2;
+
+####
+#  测试 08-$#-if 
+####
+sh 08-$#-if.sh
+
+sh 08-$#-if.sh oldboy oldgirl;
