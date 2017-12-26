@@ -9,7 +9,7 @@ pidpath=/tmp/a.pid;
 # 判断该进程文件是否存在
 if [-f "$pidpath"] #pid文件存在，说明上一个进程依旧在执行中
 then    #杀掉上一个进程并清理现场
-    kill `cat $pidpath` > /dev/nulll 2 > &1
+    kill `cat $pidpath` >/dev/nulll 2 >&1
     rm -f $pidpath; 
 fi
 
