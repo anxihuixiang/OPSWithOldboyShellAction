@@ -658,3 +658,13 @@ echo -e "1\b23"
 
 #等价于
 printf "1\b23"
+
+
+####
+# eval 解析字符串中的命令 
+####
+#执行非eval的普通echo命令
+sh noeval.sh arg1 arg2
+
+#执行eval解析的字符串命令
+sh eval.sh arg1 arg2
