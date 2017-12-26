@@ -668,3 +668,20 @@ sh noeval.sh arg1 arg2
 
 #执行eval解析的字符串命令
 sh eval.sh arg1 arg2
+
+####
+#  exec 当前进程执行脚本后退出，后面的脚本不再执行 
+####
+# 读取 tmp.log 中的内容
+exec </tmp/tmp.log 
+
+#read 逐行读取，读取到的内容放倒 line 临时变量中
+while read line 
+do
+   echo $line 
+done
+
+echo ok;
+
+# 生成 tmp.log 文件
+seq 5 >/tmp/tmp.log 
