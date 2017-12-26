@@ -703,3 +703,6 @@ fi
 # 测试 04-shift.sh
 sh 04-shift.sh 1 2
 
+# 用来去掉选项标识
+sh 04-shift.sh -c oldboy
+
