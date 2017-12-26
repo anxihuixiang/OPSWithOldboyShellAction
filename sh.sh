@@ -685,3 +685,5 @@ echo ok;
 
 # 生成 tmp.log 文件
 seq 5 >/tmp/tmp.log 
+
+sh 03-exec.sh
